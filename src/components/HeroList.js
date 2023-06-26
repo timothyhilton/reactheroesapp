@@ -15,7 +15,7 @@ function HeroList() {
   function addHero() {
     let heroName = document.getElementById("newHero").value;
 
-    axios.post('https://localhost:7002/hero', new Hero[heroName, 0])
+    axios.post('https://localhost:7002/hero', {name: heroName, id:0})
       .then(() => {
         axios.get('https://localhost:7002/hero')
           .then(heroes => setHeroes(heroes.data));})
