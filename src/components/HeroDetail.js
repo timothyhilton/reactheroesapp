@@ -14,6 +14,7 @@ function HeroDetail() {
 
     function save(){
         axios.put(`https://localhost:7002/hero/${heroId}`, hero)
+            .finally(() => window.history.back());
     }
 
     function handleChange(event) {
