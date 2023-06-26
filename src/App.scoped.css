@@ -1,6 +1,6 @@
 /* AppComponent's private CSS styles */
-h1 {
-  margin-bottom: 0;
+.title {
+  margin-bottom: 0px;
 }
 nav a {
   padding: 1rem;
