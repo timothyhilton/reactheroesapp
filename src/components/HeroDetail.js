@@ -13,7 +13,7 @@ function HeroDetail() {
     }, []);
 
     function save(){
-        
+        axios.put(`https://localhost:7002/hero/${heroId}`, hero)
     }
 
     function handleChange(event) {
