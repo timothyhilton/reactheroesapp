@@ -17,8 +17,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Navigate to='/dashboard' />} />
           <Route exact path='/dashboard' Component={Dashboard} />
-          <Route path="/heroes/" Component={HeroList} />
-          <Route path="/heroes/:heroId" Component={HeroDetail} />
+          <Route exact path="/heroes/" Component={HeroList} />
+          <Route path="/detail/:heroId" Component={HeroDetail} />
         </Routes>
       </div>
     </Router>

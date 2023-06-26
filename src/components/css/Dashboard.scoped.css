@@ -19,7 +19,7 @@
     align-items: flex-start;
   }
   
-  a {
+  .heroLink {
     background-color: #3f525c;
     border-radius: 2px;
     padding: 1rem;
@@ -40,12 +40,12 @@
   }
   
   @media (min-width: 600px) {
-    a {
+    .heroLink {
       width: 18%;
       box-sizing: content-box;
     }
   }
   
-  a:hover {
+  .heroLink:hover {
     background-color: #000;
   }

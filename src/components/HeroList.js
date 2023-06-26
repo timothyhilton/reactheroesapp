@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './css/HeroList.scoped.css';
+import Hero from '../objects/Hero'
 
 function HeroList() {
   const [heroes, setHeroes] = useState([]);
 
   useEffect(() => {
     axios.get('https://localhost:7002/hero')
-        .then(heroes => setHeroes(heroes.data)
-    );
+        .then(heroes => setHeroes(heroes.data));
   }, []);
 
   function addHero() {
     let heroName = document.getElementById("newHero").value;
 
-    axios.post('https://localhost:7002/hero', {name: heroName})
+    axios.post('https://localhost:7002/hero', new Hero[heroName, 0])
       .then(() => {
         axios.get('https://localhost:7002/hero')
           .then(heroes => setHeroes(heroes.data));})
